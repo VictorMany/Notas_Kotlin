@@ -12,15 +12,18 @@
         android:theme="@style/Theme.AppNotas.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
+
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#30000000"
             app:popupTheme="@style/Theme.AppNotas.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include
+        layout="@layout/content_main"
+        android:background="@drawable/side_nav_bar" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
