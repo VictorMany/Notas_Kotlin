@@ -1,14 +1,17 @@
+package com.example.appnotas.ui.home
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.example.appnotas.Nota
 import com.example.appnotas.R
 import com.example.appnotas.ui.home.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.layout_nota.view.*
-import android.widget.ArrayAdapter as ArrayAdapter
+
 
 
 class HomeFragment : Fragment() {
