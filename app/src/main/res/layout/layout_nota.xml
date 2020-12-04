@@ -39,7 +39,5 @@
             android:textSize="14dp"
             android:textStyle="normal"
             tools:text="Jueves 03/12/2020" />
-
     </LinearLayout>
-
 </LinearLayout>
