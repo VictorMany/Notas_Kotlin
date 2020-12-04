@@ -8,20 +8,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="11px"
         android:layout_marginTop="3px"
         android:layout_marginRight="11px"
         android:layout_marginBottom="3px"
-        android:background="drawable\round_outline"
+        android:background="@drawable/round_outline"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/lblNombrePersona"
+            android:id="@+id/lblTituloNota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginLeft="5dp"
+
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
             android:textSize="18dp"
@@ -29,12 +29,12 @@
             tools:text="¿Cómo dormir?" />
 
         <TextView
-            android:id="@+id/lblEmpresaPersona"
-            android:layout_width="match_parent"
+            android:id="@+id/lblFecha"
+            android:layout_width="351dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:paddingTop="4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="1dp"
             android:textColor="#AFAFAF"
             android:textSize="14dp"
             android:textStyle="normal"
