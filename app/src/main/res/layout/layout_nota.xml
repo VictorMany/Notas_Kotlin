@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginLeft="11px"
-        android:layout_marginTop="3px"
+        android:layout_marginTop="9px"
         android:layout_marginRight="11px"
         android:layout_marginBottom="3px"
         android:background="@drawable/round_outline"

@@ -8,10 +8,11 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
-            android:iconTint="#EFD575"
+            android:iconTint="@color/white"
+            android:title="Tareas"
+            app:showAsAction="withText"
 
-            android:title="@string/menu_home"
-            app:showAsAction="withText"></item>
+            ></item>
 
 
         <item
