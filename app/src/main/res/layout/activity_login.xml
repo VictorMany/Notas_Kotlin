@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass"
         app:layout_constraintVertical_bias="0.533"
         app:srcCompat="@drawable/icon_fingerprint_foreground" />
 
@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/icono" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/txtRegistar"
         android:layout_width="306dp"
         android:layout_height="52dp"
         android:layout_marginStart="54dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/txtPass"
         android:layout_width="306dp"
         android:layout_height="52dp"
         android:layout_marginStart="52dp"
@@ -69,7 +69,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistar" />
 
     <Button
         android:id="@+id/button"
@@ -83,7 +83,7 @@
         android:onClick="abrirDialogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
 
     <Button
         android:id="@+id/button2"

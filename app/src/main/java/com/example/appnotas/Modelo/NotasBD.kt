@@ -6,7 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import java.lang.Exception
 
-class PersonasDB(context: Context) {
+class NotasBD(context: Context) {
 
     private val openHelper: DbOpenHelper = DbOpenHelper(context)
     private val database: SQLiteDatabase
@@ -57,7 +57,6 @@ class PersonasDB(context: Context) {
         database.update("tblNotas",values,"idNota=?",whereArgs)
         database.close()
     }
-
     fun eliminarNota(id: Int):Boolean{
         val whereArgs = arrayOf(id.toString())
         try {
@@ -69,6 +68,4 @@ class PersonasDB(context: Context) {
             database.close()
         }
     }
-
-
 }

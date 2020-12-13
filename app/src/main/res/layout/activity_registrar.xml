@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/icono" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/txtRegistar"
         android:layout_width="306dp"
         android:layout_height="52dp"
         android:layout_marginStart="60dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/txtPass"
         android:layout_width="306dp"
         android:layout_height="52dp"
         android:layout_marginStart="56dp"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistar" />
 
     <Button
         android:id="@+id/button"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
 
     <Button
         android:id="@+id/button3"
