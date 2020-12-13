@@ -38,11 +38,11 @@ class HomeFragment : Fragment() {
         return view;
     }
 
-    override fun onPause() {
+    /*override fun onPause() {
         super.onPause()
         this.LlenarInformacion()
-    }
-    fun LlenarInformacion(){
+    }*/
+   /* fun LlenarInformacion(){
 
         val datasource = NotasBD(this)
         val registros =  ArrayList<Nota>()
@@ -68,11 +68,11 @@ class HomeFragment : Fragment() {
             //intent.putExtra("id",item._idPersona);
             startActivity(intent)
         }
-    }
-    override fun onResume() {
+    }*/
+    /*override fun onResume() {
         super.onResume()
         this.LlenarInformacion()
-    }
+    }*/
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -82,9 +82,9 @@ class HomeFragment : Fragment() {
 
     fun Inicializar() {
         listaNotas = ArrayList()
-        //listaNotas.add(Nota("Ir al super", "Microsoft", "","","12/02/2020"))
-        //listaNotas.add(Nota("Larry Page", "Google", "","","12/02/2020"))
-        //listaNotas.add(Nota("Sergey Brin", "Google", "","","12/02/2020"))
+        listaNotas.add(Nota(1, "Microsoft", "","","12/02/2020", "12/02/2020"))
+        listaNotas.add(Nota(2, "Google", "","","12/02/2020", "12/02/2020"))
+        listaNotas.add(Nota(3, "Google", "","","12/02/2020", "12/02/2020"))
         
         //TODO codigo adaptador
         val adaptadorNotas = AdaptadorNotas((activity as AppCompatActivity))
@@ -104,13 +104,13 @@ class HomeFragment : Fragment() {
 
 
     //TODO internal class jajaj miau
-    internal inner class AdaptadorNotas(context: Context, datos: List<Nota>) //ANTES ERA APPCOMPACTACTIVITY
+    internal inner class AdaptadorNotas(context: Context) //ANTES ERA APPCOMPACTACTIVITY      datos: List<Nota>
         : ArrayAdapter<Nota>(context, R.layout.activity_detalle_nota, listaNotas){
         private val imageConverter: ImageConverter = ImageConverter()
-        var _datos: List<Nota>
-        init {
+        //  var _datos: List<Nota>
+        /*init {
             _datos =  datos
-        }
+        }*/
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             val inflater = convertView ?: LayoutInflater.from(context).inflate(R.layout.layout_nota, parent, false)
 

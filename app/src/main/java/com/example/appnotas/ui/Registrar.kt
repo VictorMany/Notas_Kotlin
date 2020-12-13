@@ -21,13 +21,13 @@ class Registrar : AppCompatActivity() {
 
         if(id != 0){
             //TODO se realizara una modificación
-            datasource.modificarNota(id,txtRegistar.text.toString(),txtPass.text.toString())
+            datasource.modificarNota(id,txtRegistar.text.toString(),txtPass.text.toString(),"", "", "")
             Toast.makeText(applicationContext,"Se editó correctamente",
                 Toast.LENGTH_SHORT).show()
 
         }else {
             // TODO se realizara una inserción
-            datasource.guardarNota(txtRegistar.text.toString(),txtPass.text.toString())
+            datasource.guardarNota(txtRegistar.text.toString(),txtPass.text.toString(), "", "", "")
             Toast.makeText(applicationContext,"Se guardo correctamente",
                 Toast.LENGTH_SHORT).show()
         }

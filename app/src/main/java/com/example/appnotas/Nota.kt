@@ -1,6 +1,6 @@
 package com.example.appnotas
 
-class Nota(id: Int, String, descripcion:String, imagen:String, seccion:String, fecha:String) {
+class Nota(id: Int, titulo:String, descripcion:String, imagen:String, seccion:String, fecha:String) {
     var _id = id
     var _titulo = titulo
     var _descripcion =  descripcion
