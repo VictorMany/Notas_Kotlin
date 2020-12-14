@@ -7,14 +7,36 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat
+import com.example.appnotas.R.layout.activity_login
 import com.easyfingerprint.EasyFingerPrint
 import com.example.appnotas.MainActivity
 import com.example.appnotas.R
+import kotlinx.android.synthetic.main.activity_login.*
+
+var listaUsuario = mutableListOf<Usuario>()
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(activity_login)
+
+        //Lista de usuarios
+        var objUsuario = Usuario()
+        objUsuario.User = "Guga"
+        objUsuario.Password = "123"
+
+        listaUsuario.add(objUsuario)
+
+
+        btnLogin.setOnClickListener {
+            for (i: Usuario in listaUsuario) {
+                if (editTextTextEmailAddress.text.toString().equals(i.User) && editTextTextPassword.text.toString().equals(i.Password)){
+                    var intent = Intent(this,MainActivity::class.java) //getClass()
+                    startActivity(intent)
+                }
+            }
+        }
+
     }
 
 
