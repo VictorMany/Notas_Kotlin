@@ -9,11 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import com.example.appnotas.DetalleNota
 import com.example.appnotas.Modelo.NotasBD
 import com.example.appnotas.Nota
 import com.example.appnotas.R
+import kotlinx.android.synthetic.main.activity_detalle_nota.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.layout_nota.view.*
 import java.lang.reflect.Field
@@ -28,6 +30,7 @@ class ViajesFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_viajes, container, false)
         //val textView: TextView = root.findViewById(R.id.text_gallery)
+
 
         return root
     }
@@ -62,7 +65,7 @@ class ViajesFragment : Fragment() {
             val item = adapterView.getItemAtPosition(position) as Nota
             var intent  =  Intent(context, DetalleNota::class.java).apply {
                 putExtra("id", item._id)
-                putExtra("seccion", item._seccion)
+                putExtra("seccion", "Viajes")
             }
             startActivity(intent)
         }

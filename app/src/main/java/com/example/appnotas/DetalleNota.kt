@@ -1,6 +1,7 @@
 package com.example.appnotas
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.CursorWindow
 import android.graphics.Bitmap
@@ -18,6 +19,7 @@ import com.ablanco.imageprovider.ImageProvider
 import com.ablanco.imageprovider.ImageSource
 import com.example.appnotas.Modelo.ImageConverter
 import com.example.appnotas.Modelo.NotasBD
+import com.example.appnotas.ui.Todaslasnotas.HomeFragment
 
 import kotlinx.android.synthetic.main.activity_detalle_nota.*
 import java.lang.reflect.Field
@@ -51,7 +53,6 @@ class DetalleNota : AppCompatActivity() {
         //TODO Obtner la fecha actual
 
         fecha = DateFormat.format("dd-MM-yyyy", Date()).toString()
-        println("ESTA ES LA DEL GUAYABO, $fecha");
 
         //TODO hacer que el cursor de la consulta soporte una tamaño mayor por el uso de Base64  to Bitmap
         try {
@@ -63,6 +64,7 @@ class DetalleNota : AppCompatActivity() {
         }
 
         if (extras != null) {
+            println(extras.getString("seccion") + "ZZZZZZZ")
             id = extras.getInt("id")
 
             seccion = extras.getString("seccion")!!
@@ -130,12 +132,8 @@ class DetalleNota : AppCompatActivity() {
         image_note.setImageBitmap(imageConverter.bitmap(registros[0]._imagen))
         bazar = registros[0]._imagen
         /////////////////////////////////////////////////////////////////////////////
-
-
         return registros
     }
-
-
 
     fun TomarFoto(view: View){
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
@@ -215,6 +213,8 @@ class DetalleNota : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
+        var intent = Intent(this,HomeFragment::class.java) //getClass()
+        startActivity(intent)
     }
 
     override fun onRequestPermissionsResult(

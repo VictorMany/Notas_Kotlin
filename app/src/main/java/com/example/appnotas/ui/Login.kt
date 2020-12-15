@@ -36,7 +36,6 @@ class Login : AppCompatActivity() {
         listaUsuario = registros
 
         btnLogin.setOnClickListener {
-            println("Tengno sueño jejeje " + registros.toMutableList())
             //[0]._User
             var ban = 0;
             for (i: Usuario in registros) {
@@ -52,6 +51,29 @@ class Login : AppCompatActivity() {
 
     }
 
+    fun actualizar() {
+        val datasource = UsuarioDB(this)
+        val registros =  ArrayList<Usuario>()
+        val cursor =  datasource.getAll()
+        while (cursor.moveToNext()){
+            val columnas = Usuario(
+                cursor.getInt(0), cursor.getString(1), cursor.getString(2)
+            )
+            registros.add(columnas)
+        }
+        var listaUsuario = mutableListOf<Usuario>()
+        listaUsuario = registros
+    }
+
+    override fun onPause() {
+        super.onPause()
+        actualizar()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        actualizar()
+    }
 
     fun abrirDialogo(view: View){
 

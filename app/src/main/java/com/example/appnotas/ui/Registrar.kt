@@ -1,9 +1,11 @@
 package com.example.appnotas.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.appnotas.MainActivity
 import com.example.appnotas.Modelo.NotasBD
 import com.example.appnotas.Modelo.UsuarioDB
 import com.example.appnotas.R
@@ -28,5 +30,13 @@ class Registrar : AppCompatActivity() {
             applicationContext, "Se guardo correctamente",
             Toast.LENGTH_SHORT
         ).show()
+
+        var intent = Intent(this, Login::class.java) //getClass()
+        startActivity(intent)
+    }
+
+    fun Cancelar(view: View){
+        var intent = Intent(this,Login::class.java) //getClass()
+        startActivity(intent)
     }
 }

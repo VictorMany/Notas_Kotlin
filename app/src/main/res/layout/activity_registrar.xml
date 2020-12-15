@@ -44,6 +44,7 @@
         android:layout_marginStart="88dp"
         android:layout_marginTop="114dp"
         android:layout_marginEnd="40dp"
+        android:onClick="Cancelar"
         android:layout_marginBottom="92dp"
         android:background="@drawable/round_outline"
         android:fontFamily="sans-serif-light"

@@ -40,8 +40,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun AgregarNota(view: View) {
+
         var intent  =  Intent(this@MainActivity, DetalleNota::class.java)
         startActivity(intent)
+        // var intent  =  Intent(this@MainActivity, DetalleNota::class.java).apply {
+        //            putExtra("seccion", "S")
+        //        }
+        //        startActivity(intent)
     }
 
 
