@@ -6,6 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 
 class NotasBD(context: Context) {
+
     private val openHelper: DbOpenHelper = DbOpenHelper(context)
     private val database: SQLiteDatabase
 
@@ -50,6 +51,7 @@ class NotasBD(context: Context) {
         database.insert("tblNotas",null,values)
         database.close()
     }
+
 
     fun modificarNota(id: Int, TituloNota: String, DescripcionNota: String, imgNota: String, SeccionNota:String, FechaNota: String)
     {
