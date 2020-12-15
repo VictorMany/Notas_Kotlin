@@ -16,8 +16,6 @@ import com.example.appnotas.Nota
 import com.example.appnotas.R
 import kotlinx.android.synthetic.main.activity_login.*
 
-var listaUsuario = mutableListOf<Usuario>()
-
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +32,18 @@ class Login : AppCompatActivity() {
             )
             registros.add(columnas)
         }
+        var listaUsuario = mutableListOf<Usuario>()
+        listaUsuario = registros
+
         btnLogin.setOnClickListener {
+            println("Tengno sueño jejeje " + registros.toMutableList())
+            //[0]._User
+            var ban = 0;
             for (i: Usuario in registros) {
+                println(i._User + "CA")
+                println(editTextTextEmailAddress.text.toString() + "pi")
                 if (editTextTextEmailAddress.text.toString().equals(i._User) && editTextTextPassword.text.toString().equals(i._Password)){
+
                     var intent = Intent(this,MainActivity::class.java) //getClass()
                     startActivity(intent)
                 }
