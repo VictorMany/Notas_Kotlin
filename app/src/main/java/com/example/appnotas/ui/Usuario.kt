@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.appnotas.R
 
-class Usuario {
-    var User : String = ""
-    var Password : String = ""
+class Usuario(id: Int, User:String, Password:String,) {
+    var _id = id
+    var _User = User
+    var _Password = Password
 }

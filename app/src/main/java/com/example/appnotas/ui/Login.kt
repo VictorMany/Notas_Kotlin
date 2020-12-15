@@ -10,6 +10,9 @@ import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 import com.example.appnotas.R.layout.activity_login
 import com.easyfingerprint.EasyFingerPrint
 import com.example.appnotas.MainActivity
+import com.example.appnotas.Modelo.NotasBD
+import com.example.appnotas.Modelo.UsuarioDB
+import com.example.appnotas.Nota
 import com.example.appnotas.R
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -21,16 +24,19 @@ class Login : AppCompatActivity() {
         setContentView(activity_login)
 
         //Lista de usuarios
-        var objUsuario = Usuario()
-        objUsuario.User = "Guga"
-        objUsuario.Password = "123"
 
-        listaUsuario.add(objUsuario)
-
-
+        val datasource = UsuarioDB(this)
+        val registros =  ArrayList<Usuario>()
+        val cursor =  datasource.getAll()
+        while (cursor.moveToNext()){
+            val columnas = Usuario(
+                cursor.getInt(0), cursor.getString(1), cursor.getString(2)
+            )
+            registros.add(columnas)
+        }
         btnLogin.setOnClickListener {
-            for (i: Usuario in listaUsuario) {
-                if (editTextTextEmailAddress.text.toString().equals(i.User) && editTextTextPassword.text.toString().equals(i.Password)){
+            for (i: Usuario in registros) {
+                if (editTextTextEmailAddress.text.toString().equals(i._User) && editTextTextPassword.text.toString().equals(i._Password)){
                     var intent = Intent(this,MainActivity::class.java) //getClass()
                     startActivity(intent)
                 }

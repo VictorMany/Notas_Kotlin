@@ -15,6 +15,7 @@ class Registrar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar)
+        datasource = UsuarioDB(this)
     }
 
     fun GuardarUsuario (view: View){

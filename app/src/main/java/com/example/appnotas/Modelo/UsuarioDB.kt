@@ -13,7 +13,13 @@ class UsuarioDB(context: Context) {
     init {
         database = openHelper.writableDatabase
     }
-
+    fun getAll(): Cursor {
+        return database.rawQuery("""
+            select idUsuario, usuario, password
+              from tblUsuarios
+        """.trimIndent(),null)
+        database.close()
+    }
     fun guardarUsuario(User: String, Password: String)
     {
         val values =  ContentValues()
