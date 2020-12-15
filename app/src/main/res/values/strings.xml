@@ -9,4 +9,12 @@
     <string name="menu_home">Tareas</string>
     <string name="menu_gallery">Viajes</string>
     <string name="menu_slideshow">Personal</string>
+
+    <string-array name="seccionArray_strings">
+        <item>Tareas</item>
+        <item>Viajes</item>
+        <item>Personal</item>
+    </string-array>
+
 </resources>
+
