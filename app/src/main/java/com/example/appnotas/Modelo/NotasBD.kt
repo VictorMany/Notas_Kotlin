@@ -23,18 +23,18 @@ class NotasBD(context: Context) {
 
     fun consultarNotas(idNota:Int):Cursor{
         return database.rawQuery("""
-             select idNota, TituloNota,DescripcionNota, imgNota, SeccionNota, FechaNota
+             select idNota, TituloNota, DescripcionNota, imgNota, SeccionNota, FechaNota
                      from tblNotas 
-                where idNota =  $idNota
+                where idNota =$idNota
         """.trimIndent(),null)
         database.close()
     }
 
     fun consultarNotas(seccion: String): Cursor {
         return database.rawQuery("""
-            select idNota, TituloNota,DescripcionNota, imgNota, SeccionNota, FechaNota
-                from tblNotas
-            where SeccionNota =  $seccion
+            select idNota, TituloNota, DescripcionNota, imgNota, SeccionNota, FechaNota
+                from tblNotas where SeccionNota = "$seccion"
+           
         """.trimIndent(),null)
         database.close()
     }

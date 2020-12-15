@@ -1,4 +1,4 @@
-package com.example.appnotas.ui.`Todaslasnotas`
+package com.example.appnotas.ui.Tareas
 
 import android.content.Context
 import android.content.Intent
@@ -18,15 +18,16 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.layout_nota.view.*
 import java.lang.reflect.Field
 
-class HomeFragment : Fragment() {
+class TareasFragment : Fragment() {
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
-        var view = inflater.inflate(R.layout.fragment_home, container, false)
-        return view;
+        val root = inflater.inflate(R.layout.fragment_tareas, container, false)
+
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,7 +47,7 @@ class HomeFragment : Fragment() {
     fun LlenarInformacion(){
         val datasource = NotasBD(activity as AppCompatActivity)
         val registros =  ArrayList<Nota>()
-        val cursor =  datasource.consultarNotas()
+        val cursor =  datasource.consultarNotas("Tareas")
         while (cursor.moveToNext()){
             val columnas = Nota(
                 cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5)

@@ -1,15 +1,15 @@
-package com.example.appnotas.ui.`Todaslasnotas`
+package com.example.appnotas.ui.Personal
 
 import android.content.Context
 import android.content.Intent
 import android.database.CursorWindow
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.example.appnotas.DetalleNota
 import com.example.appnotas.Modelo.NotasBD
 import com.example.appnotas.Nota
@@ -18,15 +18,15 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.layout_nota.view.*
 import java.lang.reflect.Field
 
-class HomeFragment : Fragment() {
+class Personal_Fragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        var view = inflater.inflate(R.layout.fragment_home, container, false)
-        return view;
+        val root = inflater.inflate(R.layout.fragment_personal, container, false)
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,14 +39,13 @@ class HomeFragment : Fragment() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
         LlenarInformacion()
     }
 
     fun LlenarInformacion(){
         val datasource = NotasBD(activity as AppCompatActivity)
         val registros =  ArrayList<Nota>()
-        val cursor =  datasource.consultarNotas()
+        val cursor =  datasource.consultarNotas("Personal")
         while (cursor.moveToNext()){
             val columnas = Nota(
                 cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5)
@@ -61,6 +60,7 @@ class HomeFragment : Fragment() {
             var intent  =  Intent(context, DetalleNota::class.java).apply {
                 putExtra("id", item._id)
                 putExtra("seccion", item._seccion)
+                println("HOLAAAAAAA ${item._seccion}" )
             }
             startActivity(intent)
         }

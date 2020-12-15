@@ -6,15 +6,18 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="menu_home">Tareas</string>
-    <string name="menu_gallery">Viajes</string>
-    <string name="menu_slideshow">Personal</string>
+    <string name="menu_home">Todos</string>
+    <string name="menu_personal">Personal</string>
+    <string name="menu_viajes">Viajes</string>
+    <string name="menu_tareas">Tareas</string>
 
     <string-array name="seccionArray_strings">
         <item>Tareas</item>
         <item>Viajes</item>
         <item>Personal</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
 

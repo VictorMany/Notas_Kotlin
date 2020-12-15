@@ -6,20 +6,25 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_personal"
+        android:name="com.example.appnotas.ui.Personal.Personal_Fragment"
+        android:label="@string/menu_personal"
+        tools:layout="@layout/fragment_tareas" />
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.example.appnotas.ui.Todaslasnotas.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.appnotas.ui.Viajes.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_viajes"
+        android:name="com.example.appnotas.ui.Viajes.ViajesFragment"
+        android:label="@string/menu_viajes"
+        tools:layout="@layout/fragment_viajes" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.appnotas.ui.Tareas.Personal"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_tareas"
+        android:name="com.example.appnotas.ui.Tareas.TareasFragment"
+        android:label="@string/menu_tareas"
+        tools:layout="@layout/fragment_tareas" />
 </navigation>

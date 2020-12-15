@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 val nombreDB = "NotasBD.db"
-val versionDB = 1
+val versionDB = 2
 
 
 class DbOpenHelper(context: Context) :

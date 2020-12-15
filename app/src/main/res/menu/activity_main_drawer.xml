@@ -7,22 +7,25 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/icono"
             android:iconTint="@color/white"
-            android:title="Tareas"
-            app:showAsAction="withText"
+            android:title="@string/menu_home"
 
-            ></item>
-
+            app:showAsAction="withText"></item>
 
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_viajes"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/menu_viajes" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/nav_tareas"
+            android:icon="@android:drawable/ic_menu_edit"
             android:iconTint="#C38A8A"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_tareas" />
+        <item
+            android:id="@+id/nav_personal"
+            android:icon="@android:drawable/ic_lock_idle_lock"
+            android:iconTint="#C38A8A"
+            android:title="@string/menu_personal" />
     </group>
 </menu>
